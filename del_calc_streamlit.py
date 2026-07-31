@@ -38,7 +38,7 @@ if st.button("계 산"):
     avr_count = f"{delivery_count / real_total_time:.1f}" # 시간당 건수
     avr_price = total_cash // delivery_count # 건 당 평균 단가
     get_money = total_cash - today_pay # 순수익
-    avr_money = total_cash / real_total_time # 시간당 급여 (시급)
+    avr_money = int(total_cash / real_total_time) # 시간당 급여 (시급)
 
     result_text = f"""실 운행시간: {real_total_time}시간
   지출: {today_pay:,}원
