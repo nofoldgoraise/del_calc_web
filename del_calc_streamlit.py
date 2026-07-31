@@ -33,11 +33,12 @@ delivery_count = st.number_input("건 수", step=1, key = "delivery_count")
 # Button 생성 및 설정 (계산)
 if st.button("계 산"):
   try:
-    real_total_time = work_time - rest_time
-    today_pay = oil_price + food_price
-    avr_count = f"{delivery_count / real_total_time:.1f}"
-    avr_price = total_cash // delivery_count
-    get_money = total_cash - today_pay
+    real_total_time = work_time - rest_time # 실 운행시간
+    today_pay = oil_price + food_price # 총 지출
+    avr_count = f"{delivery_count / real_total_time:.1f}" # 시간당 건수
+    avr_price = total_cash // delivery_count # 건 당 평균 단가
+    get_money = total_cash - today_pay # 순수익
+    avr_money = f"{total_cash / real_total_time:.1f}" # 시간당 급여 (시급)
 
     result_text = f"""실 운행시간: {real_total_time}시간
   지출: {today_pay:,}원
@@ -45,6 +46,7 @@ if st.button("계 산"):
   매 출: {total_cash:,}원
   시간당 건 수: {avr_count}건
   평균 단가: {avr_price:,}원
+  시 급: {avr_money:,.1f}원
   ★순 수익: {get_money:,}원"""
     st.write(f"실 운행시간: {real_total_time}시간")
     st.write(f"지출: {today_pay:,}원")
