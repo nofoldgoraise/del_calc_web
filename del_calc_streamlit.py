@@ -54,7 +54,7 @@ if st.button("계 산"):
     st.write(f"매 출: {total_cash:,}원")
     st.write(f"시간당 건 수: {avr_count}건")
     st.write(f"평균 단가: {avr_price:,}원")
-    st.write(f"시 급: {avr_money:,.1f}")
+    st.write(f"★시 급: {avr_money:,}원")
     st.write(f"★순 수익: {get_money:,}원")
   except ZeroDivisionError:
     st.write("[오류] 잘못입력하셨습니다. 다시 입력해주세요.")
