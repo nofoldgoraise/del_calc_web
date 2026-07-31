@@ -46,7 +46,7 @@ if st.button("계 산"):
   매 출: {total_cash:,}원
   시간당 건 수: {avr_count}건
   평균 단가: {avr_price:,}원
-  시 급: {avr_money:,.1f}원
+  시 급: {avr_money:,}원
   ★순 수익: {get_money:,}원"""
     st.write(f"실 운행시간: {real_total_time}시간")
     st.write(f"지출: {today_pay:,}원")
